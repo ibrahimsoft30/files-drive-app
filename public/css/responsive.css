@@ -1,0 +1,71 @@
+@media (max-width: 768px) {
+  .wrapper .container form {
+    width: 80%;
+  }
+  .container-fluid .content .files-container .file {
+    flex-basis: 100%;
+  }
+  .container-fluid .content form div {
+    width: 70%;
+  }
+  .container-fluid .content form button {
+    width: 30%;
+    font-size: 0.7rem;
+  }
+  .container-fluid nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-fluid nav .sidenav {
+    position: relative;
+    display: flex;
+    width: 84%;
+    max-height: 47px;
+  }
+  .container-fluid nav .sidenav li {
+    flex: 50%;
+    text-align: center;
+  }
+  .container-fluid nav .sidenav li a {
+    font-size: 12px;
+  }
+  .container-fluid nav .brand {
+    width: 4rem;
+  }
+  .container-fluid .container form {
+    flex-direction: column;
+  }
+  .container-fluid .container form .input-wrapper {
+    width: 100%;
+    float: none;
+  }
+  .container-fluid .container form button {
+    width: 100%;
+  }
+  .container-fluid .container form div.actions {
+    width: 100%;
+    float: none;
+    display: flex;
+    justify-content: start;
+  }
+  .container-fluid .container form div.actions select {
+    flex: 50%;
+  }
+  .container-fluid .container form div.actions select:first-child {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .container-fluid .content .files-container .file {
+    flex: 40%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1198px) {
+  .container-fluid .content .files-container .file {
+    flex: 30%;
+  }
+}

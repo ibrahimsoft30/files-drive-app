@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <img src="img/logo.png" alt="">
+            <form id="verification-form">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Enter your verification code" required/>
+                    <span class="required">*</span>
+                </div>
+                <button type="submit">verifiy</button>
+                <div id="activation-alert" class="alert"></div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/utils.js" type="module"></script>
+    <script type="module" src="js/activate.js"></script>
+</body>
+</html>

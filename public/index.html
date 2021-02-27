@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="img/logo.png">
+    <title>Files Drive</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="logo-wrapper">
+                <img src="img/logo.png" class="brand">
+            </div>
+            <ul class="sidenav">
+                <li class="active"><a href="#" id="home">home</a></li>
+                <li><a href="#" id="profile">profile</a></li>
+                <li><a href="#" id="logout">logout</a></li>
+                <li><a href="#" id="remove-account">Delete Account</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <form id="uplode-form">
+                <div class="input-wrapper">
+                    <input type="file" id="files" required multiple/>
+                    <span class="required">*</span>
+                </div>
+                <button type="submit">Upode</button>
+                <div class="actions">
+                    <select id="limit">
+                        <option value="8">8</option>
+                        <option value="16">16</option>
+                        <option value="32">32</option>
+                    </select>
+                    <select id="sortBy">
+                        <option value="-createdAt">Last created</option>
+                        <option value="+createdAt">First Created</option>
+                        <option value="-updatedAt">Last updated</option>
+                        <option value="+updatedAt">First updated</option>
+                        <option value="+filename">Name Ascending</option>
+                        <option value="-filename">Name Descending</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="pagination">
+            <button data-page="0" class="disabled" id="prev"><i class="fa fa-arrow-left"></i> prev</button>
+            <button id="next">next<i class="fa fa-arrow-right"></i></button>
+        </div>
+        <div class="content">
+        </div>
+    </div>
+    <div class="wrapper modal">
+        <span class="close">X</span>
+        <div class="container">
+            <img src="img/logo.png" alt="">
+            <form id="update-file-form">
+                <div class="input-wrapper">
+                    <input type="file" required/>
+                    <span class="required">*</span>
+                </div>
+                <button type="submit">update</button>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper modal profile">
+        <span class="close">X</span>
+        <div class="container">
+            <img src="" alt="">
+            <form id="profile-form">
+                <div class="input-wrapper">
+                    <input type="email" id="profile-email" placeholder="Enter your email" required/>
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="profile-username" placeholder="Enter your username"  required/>
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="profile-password" placeholder="Enter your new password">
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="file" id="profile-image">
+                </div>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/html" id="file-template">
+        <div class="file">
+            <h4 class="extention" style="background-color: {{ background }}"> {{ extention }}</h4>
+            <div class="detials">
+                <p> {{ name }} </p>
+            </div>
+            <div class="actions">
+                <span><i  data-id="{{ id }}" class="fa fa-download download"></i></span>
+                <span><i  data-id="{{ id }}" class="fa fa-trash delete"></i></span>
+                <span><i  data-id="{{ id }}" class="fa fa-edit edit"></i></span>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="profile-template">
+        <!-- <div class="wrapper modal profile">
+            <span class="close">X</span>
+            <div class="container">
+                <img src="{{ image }}" alt="">
+                <form id="profile-form">
+                    <div class="input-wrapper">
+                        <input type="email" id="profile-email" placeholder="Enter your email" value="{{email}}" required/>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="profile-username" placeholder="Enter your username" value="{{username}}" required/>
+                        <span class="required">*</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" id="profile-password" placeholder="Enter your new password">
+                        <span class="required">*</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="file" id="profile-image">
+                    </div>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div> -->
+        
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

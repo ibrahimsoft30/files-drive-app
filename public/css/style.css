@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.container {
+  position: relative;
+  top: 10%;
+  text-align: center;
+}
+.container img {
+  width: 120px;
+}
+.container form {
+  position: relative;
+  width: 35%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.container form .input-wrapper {
+  position: relative;
+  /* width: 70%; */
+  /* float: left; */
+}
+
+.container form .input-wrapper .required {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  color: #eb4a3d;
+  font-size: 20px;
+  font-weight: 900;
+}
+.container form input,
+.container form button,
+.container-fluid .content form input,
+.container-fluid .content form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #eee;
+  outline: none;
+}
+
+.wrapper .container form button,
+.container-fluid .content form button {
+  text-transform: uppercase;
+  background-color: #4585f2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.wrapper .container form button:hover {
+  background-color: #095ff3;
+}
+.wrapper .container form .alert {
+  text-align: left;
+  padding: 8px;
+  border-left: 3px solid #ea3737;
+  display: none;
+}
+
+.wrapper .container form .signup-section,
+.wrapper .container form .login-section {
+  padding: 10px 0;
+}
+.container-fluid {
+  width: 80%;
+  margin: 10px auto;
+}
+.container-fluid nav {
+  position: relative;
+}
+.container-fluid nav .brand {
+  width: 5rem;
+}
+.container-fluid nav .sidenav {
+  display: inline-block;
+  position: absolute;
+  list-style: none;
+  right: 0;
+  top: 18px;
+}
+.container-fluid nav .sidenav li {
+  display: inline-block;
+  padding: 1rem 10px;
+}
+.container-fluid nav .sidenav li:hover {
+  background-color: #eee;
+}
+.container-fluid nav .sidenav li a {
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #4384f2;
+}
+.container-fluid .content {
+  margin-top: 27px;
+  position: relative;
+}
+.container-fluid .content .files-container {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+}
+
+.container-fluid .content .files-container .file {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  flex: 20%;
+  position: relative;
+  padding: 10px;
+  height: 161px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .content .files-container .file h4.extention {
+  font-size: 30px;
+  text-transform: uppercase;
+  background: #c5515b;
+  color: #fff;
+  text-align: center;
+}
+.container-fluid .content .files-container .file div.actions {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+.container-fluid .container {
+  margin-top: 20px;
+  /* display: flex; */
+}
+.container-fluid .container form {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.container-fluid .container form .input-wrapper {
+  flex: 63%;
+}
+.container-fluid .container form .input-wrapper input {
+  max-height: 47px;
+}
+.container-fluid .container form button {
+  flex: 10%;
+  text-transform: uppercase;
+  background-color: #4384f2;
+  color: #fff;
+  font-weight: bold;
+}
+.container-fluid .container form div.actions {
+  flex: 27%;
+  display: flex;
+  justify-content: start;
+  max-height: 47px;
+}
+.container-fluid .container form div.actions select {
+  padding: 14px 10px;
+  border: 1px solid #eee;
+  flex: 50%;
+}
+.container-fluid .container form div.actions select:first-child {
+  flex: 33%;
+  margin: 0 10px;
+}
+.container-fluid .pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.container-fluid .pagination button {
+  padding: 5px 18px;
+  border: 0;
+  text-transform: uppercase;
+  background: #4384f2;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  outline: none;
+  max-height: 25px;
+}
+.container-fluid .pagination button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.container-fluid .pagination button:hover:not(.disabled) {
+  width: 100px;
+  background-color: #eb4a3d;
+}
+.container-fluid
+  .content
+  .files-container
+  .file
+  div.actions
+  span:not(:last-child) {
+  margin-right: 36px;
+}
+.container-fluid .content .files-container .file div.actions span i {
+  font-size: 1.3em;
+}
+.container-fluid .content .files-container .file div.actions span i.delete {
+  color: rgb(234 75 62);
+}
+
+.container-fluid .content .files-container .file div.actions span i.edit {
+  color: #095ff3;
+}
+.container-fluid .content .files-container .file div.actions span i.download {
+  color: #ff9800;
+}
+.container-fluid .content .files-container .file div.detials {
+  position: absolute;
+  width: 100%;
+  top: 36%;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.active {
+  background-color: #4585f2 !important;
+}
+.active a {
+  color: #fff !important;
+}
+.content img {
+  border-radius: 50% !important;
+  height: 120px;
+}
+.wrapper.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.wrapper .close {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  background: #e94b3e;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 4px 9px;
+  border-radius: 50%;
+  font-family: sans-serif;
+  cursor: pointer;
+}

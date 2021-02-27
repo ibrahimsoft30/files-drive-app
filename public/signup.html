@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <img src="img/logo.png" alt="">
+            <form id="signup-form">
+                <div class="input-wrapper">
+                    <input type="email" id="signup-email" placeholder="Enter your email" required/>
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="signup-username" placeholder="Enter your username" required/>
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                    <span class="required">*</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="file" id="signup-image">
+                </div>
+                <button type="submit">signup</button>
+                <div id="signup-alert" class="alert"></div>
+                <div class="login-section">
+                    If already have an account login <a href="/login.html">here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/utils.js" type="module"></script>
+    <script type="module" src="js/signup.js"></script>
+</body>
+</html>
