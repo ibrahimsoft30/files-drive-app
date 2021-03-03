@@ -2,7 +2,7 @@
 const express = require('express');
 const multer = require('multer');
 const auth = require('../middlewares/auth');
-const userController = require('../controlers/UserController');
+const userController = require('../controllers/UserController');
 // create user router
 const userRouter = new express.Router;
 const uplode = multer({

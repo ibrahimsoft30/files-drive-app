@@ -2,7 +2,7 @@
 const express = require('express');
 const multer = require('multer');
 const auth = require('../middlewares/auth');
-const fileController = require('../controlers/FileController');
+const fileController = require('../controllers/FileController');
 // create files router
 const fileRouter = new express.Router;
 const fileUplode = multer();
