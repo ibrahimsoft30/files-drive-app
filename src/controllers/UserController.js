@@ -4,7 +4,7 @@ const randomString = require('random-string');
 const User = require('../models/user');
 const sendVerificationEmail = require('../utils/sendEmail');
 
-class UserController {
+module.exports =  {
     async login(req,res) {
         try {
             const user = await User.findByCredintals(req.body.username,req.body.password);
@@ -14,7 +14,7 @@ class UserController {
             res.status(404).send({error: e.message});
         }
         
-    }
+    },
 
     async signup(req,res) {
         try{
@@ -39,7 +39,7 @@ class UserController {
         }catch(e){
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async verifyEmail(req,res) {
         try {
@@ -51,7 +51,7 @@ class UserController {
         } catch (e) {
             res.status(404).send({error: e.message});
         }
-    }
+    },
 
     async logout(req,res) {
         try {
@@ -63,7 +63,7 @@ class UserController {
         } catch (e) {
             res.status(500).send({error: e.message});
         }
-    }
+    },
 
     async showProfile(req,res) {
         try {
@@ -71,7 +71,7 @@ class UserController {
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async updateProfile(req,res) {
         try {
@@ -89,7 +89,7 @@ class UserController {
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async deleteAccount(req,res) {
         try {
@@ -100,6 +100,3 @@ class UserController {
         }
     }
 }
-
-const userController = new UserController();
-module.exports = userController;

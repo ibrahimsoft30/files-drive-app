@@ -1,7 +1,7 @@
 const uniqolor = require('uniqolor');
 const File = require('../models/file');
 
-class FileController{
+module.exports = {
     async getFiles (req,res) {
         try {
             let sort = {};
@@ -24,7 +24,7 @@ class FileController{
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
     async uplodeFiles(req,res) {
         try {
             if(req.files.length > 0){
@@ -52,7 +52,7 @@ class FileController{
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async updateFile(req,res) {
         try {
@@ -77,7 +77,7 @@ class FileController{
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async deleteFile(req,res) {
         try {
@@ -89,7 +89,7 @@ class FileController{
         } catch (e) {
             res.status(400).send({error: e.message});
         }
-    }
+    },
 
     async downloadFile(req,res){
         try {
@@ -107,6 +107,3 @@ class FileController{
         }
     }
 }
-
-const fileController = new FileController();
-module.exports = fileController;

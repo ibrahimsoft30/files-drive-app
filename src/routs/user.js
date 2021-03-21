@@ -18,13 +18,13 @@ const uplode = multer({
 // routes
 userRouter.post('/users/login', userController.login);
 
-userRouter.post('/users/signup',uplode.single('image') , userController.signup);
+userRouter.post('/users/signup', uplode.single('image') , userController.signup);
 
 userRouter.post('/users/verfiy', userController.verifyEmail);
 
-userRouter.post('/users/logout',auth, userController.logout);
+userRouter.post('/users/logout', auth, userController.logout);
 
-userRouter.get('/users/profile/show',auth, userController.showProfile);
+userRouter.get('/users/profile/show', auth, userController.showProfile);
 
 userRouter.patch('/users/profile/update', auth, uplode.single('image'), userController.updateProfile);
 
